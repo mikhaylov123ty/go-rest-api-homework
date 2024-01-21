@@ -44,7 +44,6 @@ var tasks = map[string]Task{
 
 // Обработчик запросов GET для эндпоинта /users
 func getTasks(w http.ResponseWriter, r *http.Request) {
-
 	resp, err := json.MarshalIndent(tasks, "", "    ")
 	if err != nil {
 		fmt.Printf("Ошибка в процессе сериализации задач: %s\n", err.Error())
